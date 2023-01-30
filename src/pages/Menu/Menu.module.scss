@@ -50,9 +50,19 @@
   @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
     padding: 50px $padding-horizontal-md;
   }
+
   &__titulo {
     color: white;
     font-size: 2.2rem;
     margin-bottom: 30px;
+  }
+
+  &__filters {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
   }
 }

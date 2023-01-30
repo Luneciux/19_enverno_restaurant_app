@@ -1,4 +1,5 @@
 import Search from './Search';
+import Filters from './Filters';
 import {ReactComponent as Logo} from 'assets/images/logo.svg'
 
 import styles from './Menu.module.scss';
@@ -24,6 +25,9 @@ function Menu() {
                     searchString={searchString} 
                     setSearchString={setSearchString}
                 />
+                <div className={styles.foodsStyle__filters}>
+                    <Filters />
+                </div>
             </section>
         </main>
     )
