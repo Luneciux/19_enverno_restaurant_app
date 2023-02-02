@@ -1,15 +1,22 @@
 import styles from './Filters.module.scss';
 import filters from './filters.json';
+import classNames from 'classnames';
 
 interface Ioption {
     id: number,
     label: string
 }
 
-function Filters () {
+interface FilterProps {
+    filter: number | null,
+    setFilter: React.Dispatch<React.SetStateAction<number | null>>
+}
+
+function Filters ( {filter, setFilter} : FilterProps ) {
 
     function selectFilter(option : Ioption){
-
+        if(filter === option.id) return setFilter(null);
+        return setFilter(option.id);
     }
 
     return (
@@ -18,7 +25,11 @@ function Filters () {
                 <button 
                     key={option.id}
                     onClick={() => selectFilter(option)}
-                    className={styles.filtersStyle__filter}
+
+                    className={classNames({
+                            [styles.filtersStyle__filter]: true,
+                            [styles["filtersStyle__filter--active"]]: filter === option.id,
+                    })}
                 >
                     {option.label}
                 </button>    

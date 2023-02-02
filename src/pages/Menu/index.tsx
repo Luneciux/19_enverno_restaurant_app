@@ -8,6 +8,7 @@ import { useState } from 'react';
 function Menu() {
 
     const [searchString, setSearchString] = useState("");
+    const [filter, setFilter] = useState<number | null>(null);
 
     return (
         <main>
@@ -26,7 +27,10 @@ function Menu() {
                     setSearchString={setSearchString}
                 />
                 <div className={styles.foodsStyle__filters}>
-                    <Filters />
+                    <Filters 
+                        filter={filter}
+                        setFilter={setFilter}
+                    />
                 </div>
             </section>
         </main>
