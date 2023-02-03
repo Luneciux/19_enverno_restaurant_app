@@ -4,6 +4,7 @@ import {ReactComponent as Logo} from 'assets/images/logo.svg'
 
 import styles from './Menu.module.scss';
 import { useState } from 'react';
+import Order from './Order';
 
 function Menu() {
 
@@ -31,6 +32,7 @@ function Menu() {
                         filter={filter}
                         setFilter={setFilter}
                     />
+                    <Order />
                 </div>
             </section>
         </main>

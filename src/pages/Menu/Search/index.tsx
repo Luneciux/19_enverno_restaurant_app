@@ -13,6 +13,7 @@ function Search ({searchString, setSearchString} : SearchProps) {
             <input 
                 value={searchString}
                 onChange={e => setSearchString(e.target.value)}
+                placeholder='Buscar'
             />
             <CgSearch 
                 size={20}
