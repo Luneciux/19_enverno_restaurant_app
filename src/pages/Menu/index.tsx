@@ -10,6 +10,7 @@ function Menu() {
 
     const [searchString, setSearchString] = useState("");
     const [filter, setFilter] = useState<number | null>(null);
+    const [order, setOrder] = useState("");
 
     return (
         <main>
@@ -32,7 +33,10 @@ function Menu() {
                         filter={filter}
                         setFilter={setFilter}
                     />
-                    <Order />
+                    <Order 
+                        order={order}
+                        setOrder={setOrder}
+                    />
                 </div>
             </section>
         </main>
