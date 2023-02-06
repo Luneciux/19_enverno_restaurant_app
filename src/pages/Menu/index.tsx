@@ -1,10 +1,12 @@
-import Search from './Search';
-import Filters from './Filters';
 import {ReactComponent as Logo} from 'assets/images/logo.svg'
+import { useState } from 'react';
+
+import Search from './Search';
+import Order from './Order';
+import Itens from './Itens';
+import Filters from './Filters';
 
 import styles from './Menu.module.scss';
-import { useState } from 'react';
-import Order from './Order';
 
 function Menu() {
 
@@ -38,6 +40,7 @@ function Menu() {
                         setOrder={setOrder}
                     />
                 </div>
+                <Itens />
             </section>
         </main>
     )
