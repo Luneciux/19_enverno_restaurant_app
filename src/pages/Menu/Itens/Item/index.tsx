@@ -1,5 +1,4 @@
 import styles from './Item.module.scss';
-import logo from 'assets/images/logo.svg';
 import itens from '../itens.json';
 import classNames from 'classnames';
 
@@ -20,7 +19,7 @@ function Item(props : ItemProps) {
     return (
         <div className={styles.itemStyle}>
             <div className={styles.itemStyle__image}>
-                <img src={logo} alt={title}/>
+                <img src={photo} alt={title}/>
             </div>
             <div className={styles.itemStyle__description}>
                 <div className={styles.itemStyle__title}>
