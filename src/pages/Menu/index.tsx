@@ -40,7 +40,11 @@ function Menu() {
                         setOrder={setOrder}
                     />
                 </div>
-                <Itens />
+                <Itens 
+                    searchString={searchString}
+                    filter={filter}
+                    order={order}
+                />
             </section>
         </main>
     )

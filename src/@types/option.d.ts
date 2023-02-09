@@ -1,0 +1,1 @@
+export type option = "porcao" | "qtd_pessoas" | "preco";
